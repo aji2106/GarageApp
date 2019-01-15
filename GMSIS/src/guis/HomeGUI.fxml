@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="721.0" style="-fx-background-color: #273E47;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="233.0" layoutX="137.0" layoutY="139.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="447.0" />
+      <Group layoutX="155.0" layoutY="198.0" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="143.0" AnchorPane.topAnchor="185.0">
+         <children>
+            <JFXButton fx:id="btn_customerAcc" layoutX="-12.0" layoutY="-12.0" onAction="#btn_customer_account" prefHeight="50.0" prefWidth="200.0" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Customer Accounts" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Roman" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_vehRec" layoutX="222.0" layoutY="-12.0" onAction="#btn_vehicle_record" prefHeight="50.0" prefWidth="200.0" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Vehicle Record" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Roman" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_vehParts" layoutX="222.0" layoutY="78.0" onAction="#btn_vehicle_parts" prefHeight="50.0" prefWidth="200.0" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Vehicle Parts" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Roman" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_diagRep" layoutX="-12.0" layoutY="78.0" onAction="#btn_diagrep" prefHeight="50.0" prefWidth="200.0" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Diagnosis &amp; Repair Booking" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Roman" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Group>
+      <JFXButton fx:id="btn_activeUsers" layoutX="14.0" layoutY="438.0" onAction="#manageUsers" prefHeight="27.0" prefWidth="109.0" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Manage Users" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+      <Text fx:id="txt_IDStamp" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Avenir Roman" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="313.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" AnchorPane.leftAnchor="313.0" AnchorPane.rightAnchor="313.669921875" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Avenir Black" size="34.0" />
+         </font>
+      </Text>
+      <Text fx:id="txt_timeStamp" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="Avenir Roman" size="14.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btn_logoutUser" layoutX="584.0" layoutY="434.0" onAction="#btn_logout_user" style="-fx-background-color: #D24C00;" text="Logout" textFill="WHITE" />
+   </children>
+</AnchorPane>

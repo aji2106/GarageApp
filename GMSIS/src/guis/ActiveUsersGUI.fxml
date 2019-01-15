@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="684.0" style="-fx-background-color: #273E47;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton fx:id="btn_delete" layoutX="531.0" layoutY="362.0" onAction="#delete" prefHeight="27.0" prefWidth="125.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Delete" textFill="WHITE" />
+      <Label layoutX="206.0" text="Active Users" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="39.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_home" layoutX="615.0" layoutY="8.0" onAction="#home" style="-fx-background-color: #D24C00;" text="Home" textFill="WHITE" />
+      <JFXTextField fx:id="txt_fn" focusColor="BLACK" layoutX="519.0" layoutY="93.0" promptText="First Name" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+      <JFXTextField fx:id="txt_ln" focusColor="BLACK" layoutX="519.0" layoutY="125.0" promptText="Last Name" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+      <JFXTextField fx:id="txt_id" focusColor="BLACK" layoutX="519.0" layoutY="157.0" promptText="User ID" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+      <JFXTextField fx:id="txt_pass" focusColor="BLACK" layoutX="519.0" layoutY="188.0" promptText="Password" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+      <JFXTextField fx:id="txt_rate" focusColor="BLACK" layoutX="519.0" layoutY="220.0" promptText="Hourly Rate" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+      <JFXButton fx:id="btn_confirm" layoutX="532.0" layoutY="394.0" onAction="#Confirm" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Confirm Changes" textFill="WHITE" />
+      <TableView fx:id="table_activeUsersTable" layoutX="14.0" layoutY="93.0" onMouseClicked="#rowClick" prefHeight="200.0" prefWidth="492.0">
+         <columns>
+            <TableColumn id="firstNameColumn" fx:id="column_firstName" prefWidth="108.0" text="First Name" />
+            <TableColumn id="LastNameColumn" fx:id="column_lastName" prefWidth="105.0" text="Last Name" />
+            <TableColumn id="userIDNameColumn" fx:id="column_ID" prefWidth="95.0" text="User ID" />
+            <TableColumn id="hourlyRateColumn" fx:id="column_hourlyRate" prefWidth="98.0" text="Hourly Rate" />
+            <TableColumn id="adminColumn" fx:id="column_admin" prefWidth="85.0" text="Admin" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btn_add" layoutX="531.0" layoutY="298.0" onAction="#add" prefHeight="27.0" prefWidth="125.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Add" textFill="WHITE" />
+      <JFXButton fx:id="btn_clear" layoutX="531.0" layoutY="330.0" onAction="#clear" prefHeight="27.0" prefWidth="125.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Clear" textFill="WHITE" />
+      <JFXComboBox fx:id="combo_admin" focusColor="BLACK" layoutX="518.0" layoutY="262.0" prefHeight="27.0" prefWidth="151.0" style="-fx-background-color: white;" unFocusColor="#d24c00" visibleRowCount="2" />
+      <Label layoutX="518.0" layoutY="245.0" text="Is Admin?" textFill="WHITE" />
+   </children>
+</AnchorPane>

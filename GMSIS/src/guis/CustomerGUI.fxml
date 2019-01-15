@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="721.0" style="-fx-background-color: #273E47;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.6666" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #273E47;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #273E47;">
+               <children>
+                  <TabPane prefHeight="400.0" prefWidth="395.0" style="-fx-background-color: #273E47;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab closable="false" text="List Customers">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="txt_search_box" focusColor="#a4243b" layoutX="14.0" layoutY="16.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: white;" unFocusColor="#d24c00" AnchorPane.bottomAnchor="362.0" AnchorPane.leftAnchor="14.0" />
+                                    <JFXButton fx:id="btn_search" layoutX="159.0" layoutY="15.0" onAction="#search" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Search" textFill="WHITE" AnchorPane.bottomAnchor="361.0" AnchorPane.leftAnchor="159.0" />
+                                    <JFXTreeTableView fx:id="table_customers" layoutY="50.0" prefHeight="279.0" prefWidth="395.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                    <Group layoutX="9.0" layoutY="364.0">
+                                       <children>
+                                          <JFXButton fx:id="btn_new_customer" layoutX="1.0" onAction="#new_customer" prefHeight="27.0" prefWidth="112.0" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="New Customer" textFill="WHITE" />
+                                          <JFXButton fx:id="btn_view_customer" disable="true" layoutX="328.0" onAction="#view_customer" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="View More Details" textFill="WHITE" />
+                                          <JFXButton fx:id="btn_delete_customer" disable="true" layoutX="161.0" onAction="#delete_customer" prefHeight="27.0" prefWidth="122.0" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Delete Customer" textFill="WHITE" />
+                                       </children>
+                                    </Group>
+                                    <JFXRadioButton fx:id="radio_name" layoutX="229.0" layoutY="20.0" onAction="#selectSearchByName" selected="true" text="Name" textFill="WHITE" />
+                                    <JFXRadioButton fx:id="radio_number_plate" layoutX="319.0" layoutY="20.0" onAction="#selectSearchByNumberPlate" text="Number Plate" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="254.0" style="-fx-background-color: #273E47;">
+               <children>
+                  <JFXTextField fx:id="txt_field_name" disable="true" focusColor="#a4243b" layoutX="5.0" layoutY="30.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: white;" unFocusColor="#d24c00" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Label layoutX="5.0" layoutY="14.0" prefHeight="17.0" prefWidth="185.0" text="Name" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <JFXTextField fx:id="txt_field_address" disable="true" focusColor="#a4243b" layoutX="5.0" layoutY="83.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: white;" unFocusColor="#d24c00" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Label layoutX="5.0" layoutY="67.0" prefHeight="17.0" prefWidth="185.0" text="Address" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <JFXTextField fx:id="txt_field_postcode" disable="true" focusColor="#a4243b" layoutX="5.0" layoutY="139.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: white;" unFocusColor="#d24c00" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Label layoutX="5.0" layoutY="123.0" prefHeight="17.0" prefWidth="185.0" text="Postcode" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <JFXTextField fx:id="txt_field_phone" disable="true" focusColor="#a4243b" layoutX="5.0" layoutY="193.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: white;" unFocusColor="#d24c00" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Label layoutX="5.0" layoutY="177.0" prefHeight="17.0" prefWidth="185.0" text="Phone" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <JFXTextField fx:id="txt_field_email" disable="true" focusColor="#a4243b" layoutX="5.0" layoutY="246.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: white;" unFocusColor="#d24c00" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Label layoutX="5.0" layoutY="230.0" prefHeight="17.0" prefWidth="185.0" text="Email" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Label layoutX="5.0" layoutY="286.0" prefHeight="17.0" prefWidth="185.0" text="Type" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <JFXButton fx:id="btn_confirm" disable="true" layoutX="3.0" layoutY="350.0" onAction="#confirm" prefHeight="50.0" prefWidth="195.0" ripplerFill="#a4243b" style="-fx-background-color: D24C00;" text="MEOW" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXComboBox fx:id="combo_type" disable="true" focusColor="#a4243b" layoutX="4.0" layoutY="303.0" prefHeight="27.0" prefWidth="226.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label alignment="CENTER" layoutY="-5.0" prefHeight="17.0" prefWidth="588.0" text="Customer Accounts" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+         <font>
+            <Font name="Avenir Black" size="39.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_home" layoutX="531.0" layoutY="10.0" onAction="#btn_home" ripplerFill="#a4243b" style="-fx-background-color: #D24C00;" text="Home" textFill="WHITE" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1065.0" style="-fx-background-color: #273E47;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label id="vehicleRecordsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="6.0" prefHeight="50.0" prefWidth="600.0" text="Vehicle Records" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.8240827845719662" layoutY="49.0" prefHeight="351.0" prefWidth="944.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="444.0">
+               <children>
+                  <JFXTreeTableView id="vehicleTable" fx:id="table_vehicle" layoutY="-1.0" prefHeight="339.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #273E47;">
+               <children>
+                  <AnchorPane prefHeight="367.0" prefWidth="190.0" style="-fx-background-color: #273E47;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton id="vehicleAddBtn" fx:id="button_vehicle_add" layoutX="10.0" layoutY="186.0" onAction="#add_vehicle" prefHeight="25.0" prefWidth="158.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Add Vehicle" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                        <JFXButton id="vehicleDeleteBtn" fx:id="button_vehicle_delete" layoutX="10.0" layoutY="294.0" onAction="#delete_vehicle" prefHeight="25.0" prefWidth="158.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Delete Selected Vehicle" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                        <JFXButton id="vehicleSelectBtn" fx:id="button_vehicle_edit" layoutX="10.0" layoutY="258.0" onAction="#edit_vehicle" prefHeight="25.0" prefWidth="158.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Edit Selected Vehicle" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                        <JFXTextField id="vehicleSearchBar" fx:id="input_vehicle_search" focusColor="#d24c00" labelFloat="true" layoutX="7.0" layoutY="14.0" prefHeight="25.0" prefWidth="164.0" promptText="Type to search..." style="-fx-background-color: WHITE;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+                        <JFXButton id="vehicleViewBtn" fx:id="button_vehicle_view" layoutX="10.0" layoutY="222.0" onAction="#view_vehicle" prefHeight="25.0" prefWidth="158.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="View Selected Vehicle" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                        <JFXRadioButton fx:id="input_radio_search_registration" layoutX="-1.0" layoutY="47.0" prefHeight="25.0" prefWidth="98.0" selected="true" style="-: white;" text="Registration" textFill="WHITE" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="47.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="searchgroup" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="input_radio_search_make" layoutX="102.0" layoutY="47.0" prefHeight="25.0" prefWidth="80.0" text="Make" textFill="WHITE" toggleGroup="$searchgroup" AnchorPane.leftAnchor="102.0" AnchorPane.topAnchor="47.0" />
+                        <JFXButton id="vehicleSearchBtn" fx:id="button_vehicle_search" layoutX="10.0" layoutY="102.0" onAction="#filter_table" prefHeight="25.0" prefWidth="158.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Search" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="102.0" />
+                        <JFXRadioButton fx:id="input_radio_search_classification" layoutY="72.0" prefHeight="25.0" prefWidth="80.0" text="Classification" textFill="WHITE" toggleGroup="$searchgroup" />
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <JFXButton id="vehicleAddBtn" fx:id="button_home" layoutX="528.0" layoutY="13.0" onAction="#home" prefHeight="25.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Home" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="13.0" />
+   </children>
+</AnchorPane>

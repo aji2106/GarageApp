@@ -1,0 +1,22 @@
+#netbeans specific folders / files to ignore
+GMSIS/build/
+GMSIS/nbuild/
+GMSIS/dist/
+GMSIS/ndist/
+GMSIS/.nb-gradle/
+GMSIS/nbproject/*
+!GMSIS/nbproject/project.properties
+!GMSIS/nbproject/project.xml
+
+#java files to ignore
+*.class
+
+
+#random backup files
+*.DS_Store
+*.swp
+*.log
+*.vux
+*.bak_000f
+*.lck
+/GMSIS/src/GUIs/nbproject/private/

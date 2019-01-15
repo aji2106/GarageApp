@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.6789297658862876" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookingsSearch.BookingsSearchGUIController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #273E47;">
+            <children>
+                <TreeTableView layoutX="1.0" layoutY="47.0" prefHeight="309.0" prefWidth="402.0" />
+                <JFXRadioButton fx:id="radio_parts" layoutX="316.0" layoutY="23.0" onAction="#parts" text="Parts" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup" />
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton fx:id="radio_veh" layoutX="231.0" layoutY="23.0" onAction="#vehicles" text="Vehicles" textFill="WHITE" toggleGroup="$toggleGroup" />
+                <JFXRadioButton fx:id="radio_bookings" layoutX="140.0" layoutY="23.0" onAction="#bookings" text="Bookings" textFill="WHITE" toggleGroup="$toggleGroup" />
+                <JFXTextField fx:id="txt_search" focusColor="WHITE" labelFloat="true" layoutX="3.0" layoutY="19.0" prefHeight="25.0" prefWidth="83.0" promptText="Search Box" style="-fx-background-color: WHITE;" unFocusColor="#d24c00" />
+                <JFXButton fx:id="btn_add" layoutX="21.0" layoutY="363.0" onAction="#add" ripplerFill="#d24c00" style="-fx-background-color: #D24C00;" text="Add" textFill="WHITE" />
+                <JFXButton fx:id="btn_edit" layoutX="129.0" layoutY="363.0" onAction="#edit" ripplerFill="#d24c00" style="-fx-background-color: #D24C00;" text="Edit" textFill="WHITE" />
+                <JFXButton fx:id="btn_delete" layoutX="331.0" layoutY="363.0" onAction="#delete" ripplerFill="#d24c00" style="-fx-background-color: #D24C00;" text="Delete" textFill="WHITE" />
+            <JFXButton fx:id="btn_search" layoutX="89.0" layoutY="18.0" onAction="#search" ripplerFill="#d24c00" style="-fx-background-color: #D24C00;" text="Search" textFill="WHITE" />
+            <JFXButton fx:id="btn_view" layoutX="231.0" layoutY="363.0" onAction="#view" ripplerFill="#d24c00" style="-fx-background-color: #D24C00;" text="View" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #273E47;">
+            <children>
+                <JFXTextField fx:id="txt_cusName" editable="false" focusColor="WHITE" labelFloat="true" layoutX="26.0" layoutY="14.0" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: WHITE;" unFocusColor="#d24c00" />
+                <JFXTextField fx:id="txt_typeOfBooking" editable="false" focusColor="WHITE" labelFloat="true" layoutX="26.0" layoutY="48.0" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: WHITE;" unFocusColor="#d24c00" />
+                <TreeTableView fx:id="table_pastFutureDates" layoutX="5.0" layoutY="206.0" prefHeight="158.0" prefWidth="179.0" />
+                <TextArea fx:id="txtarea_partsUsed" editable="false" layoutX="26.0" layoutY="83.0" prefHeight="119.0" prefWidth="137.0" style="-fx-background-color: white;" />
+            <JFXButton fx:id="btn_confirm" layoutX="68.0" layoutY="367.0" onAction="#confirm" ripplerFill="#d24c00" style="-fx-background-color: #D24C00;" text="Confirm" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

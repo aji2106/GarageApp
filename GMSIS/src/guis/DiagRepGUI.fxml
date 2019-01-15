@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabpane_home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="701.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab fx:id="tab_diagRep" closable="false" style="-fx-opacity: 100;" text="Booking">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="672.0" style="-fx-background-color: #273E47;">
+               <children>
+                  <JFXTextField fx:id="txt_vehMile" focusColor="WHITE" layoutX="192.0" layoutY="175.0" prefHeight="25.0" prefWidth="166.0" promptText="Vehicle Mileage" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXDatePicker fx:id="datepic_cal" defaultColor="#d24c00" editable="false" layoutX="378.0" layoutY="79.0" onAction="#checkerTime" prefHeight="23.0" prefWidth="191.0" promptText="Date of Booking" style="-fx-background-color: white;" />
+                  <JFXButton fx:id="btn_book" layoutX="262.0" layoutY="244.0" onAction="#book" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Add Booking" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXComboBox fx:id="drp_veh" focusColor="WHITE" layoutX="191.0" layoutY="129.0" onAction="#setMileage" prefHeight="27.0" prefWidth="168.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXButton fx:id="btn_home" layoutX="628.0" layoutY="8.0" onAction="#home" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Home" textFill="WHITE" />
+                  <JFXComboBox fx:id="drp_type" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="129.0" prefHeight="27.0" prefWidth="168.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXTextField fx:id="txt_repair" focusColor="WHITE" layoutX="14.0" layoutY="176.0" prefHeight="25.0" prefWidth="167.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <Label layoutX="126.0" layoutY="-7.0" prefHeight="58.0" prefWidth="467.0" text="Diagnosis &amp; Repairs" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="39.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="drp_time" focusColor="WHITE" layoutX="378.0" layoutY="128.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXTextField fx:id="txt_labour" editable="false" focusColor="WHITE" labelFloat="true" layoutX="377.0" layoutY="176.0" prefHeight="25.0" prefWidth="166.0" style="-fx-background-color: white;" text="Bill Amount" unFocusColor="#d24c00" />
+                  <JFXComboBox fx:id="drp_mechID" focusColor="WHITE" layoutX="191.0" layoutY="84.0" prefHeight="27.0" prefWidth="168.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXTextField fx:id="txt_temp" layoutX="439.0" layoutY="327.0" visible="false" />
+                  <Label fx:id="label_reg" layoutX="191.0" layoutY="119.0" text="Vehicle Registration" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_mech" layoutX="190.0" layoutY="74.0" text="Mechanic ID" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_booking" layoutX="382.0" layoutY="118.0" text="Time of Booking" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_typeBooking" layoutX="14.0" layoutY="119.0" prefHeight="9.0" prefWidth="92.0" text="Type of Booking" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn_edit" layoutX="263.0" layoutY="244.0" onAction="#update" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Edit Booking" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_goBack" layoutX="287.0" layoutY="300.0" onAction="#goBack" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Back to Add Page" textFill="WHITE" />
+                  <Label fx:id="label_timeTaken" layoutX="13.0" layoutY="166.0" text="Estimated Time Taken To Repair (Hours)" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="drp_cusID" focusColor="WHITE" layoutX="13.0" layoutY="84.0" onAction="#checker" prefHeight="27.0" prefWidth="168.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <Label fx:id="label_cusID" layoutX="13.0" layoutY="74.0" text="Customer ID" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tab_search" text="Search">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="697.0" style="-fx-background-color: #273E47;">
+               <children>
+                  <TableView fx:id="table_search" layoutX="21.0" layoutY="51.0" onMouseClicked="#onSelection" prefHeight="317.0" prefWidth="444.0">
+                    <columns>
+                      <TableColumn id="CustomerID" fx:id="column_cusID" prefWidth="91.0" text="CustomerID" />
+                      <TableColumn id="VehicleID" fx:id="column_vehReg" minWidth="0.0" prefWidth="137.0" text="Vehicle Registration" />
+                        <TableColumn id="NextBookingDate" fx:id="column_bookingDate" prefWidth="138.0" text="Booking Date" />
+                        <TableColumn id="bookingID" fx:id="column_bookingID" prefWidth="75.0" text="Booking ID" />
+                    </columns>
+                  </TableView>
+                  <JFXTextField fx:id="txt_bill" editable="false" focusColor="WHITE" labelFloat="true" layoutX="471.0" layoutY="51.0" prefHeight="25.0" prefWidth="215.0" promptText="£ Total Bill " style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXTextField fx:id="txt_typeOfBooking" editable="false" focusColor="WHITE" labelFloat="true" layoutX="470.0" layoutY="90.0" prefHeight="25.0" prefWidth="217.0" promptText="Type of Booking" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <TextArea fx:id="txtarea_otherBookings" editable="false" layoutX="470.0" layoutY="264.0" prefHeight="92.0" prefWidth="218.0" promptText="Other Booking Dates" />
+                  <JFXButton fx:id="btn_confirm" layoutX="510.0" layoutY="361.0" onAction="#edit" prefHeight="27.0" prefWidth="69.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Edit" textFill="WHITE" />
+                  <JFXButton fx:id="btn_delete" layoutX="510.0" layoutY="396.0" onAction="#delete" prefHeight="27.0" prefWidth="69.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Delete" textFill="WHITE" />
+                  <JFXButton fx:id="btn_home2" layoutX="628.0" layoutY="8.0" onAction="#home" prefHeight="27.0" prefWidth="55.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Home" textFill="WHITE" />
+                  <JFXTextField fx:id="txt_booking" editable="false" focusColor="WHITE" labelFloat="true" layoutX="470.0" layoutY="129.0" prefHeight="25.0" prefWidth="217.0" promptText="Booking ID" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXComboBox fx:id="drp_hourly" focusColor="WHITE" layoutX="68.0" layoutY="12.0" onAction="#oneSelectHour" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <Label fx:id="label_hourly" layoutX="21.0" layoutY="17.0" text="Hours:" textFill="WHITE" />
+                  <JFXComboBox fx:id="drp_daily" focusColor="WHITE" layoutX="204.0" layoutY="12.0" onAction="#oneSelectDay" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <Label fx:id="label_daily" layoutX="164.0" layoutY="17.0" text="Daily:" textFill="WHITE" />
+                  <JFXComboBox fx:id="drp_monthly" focusColor="WHITE" layoutX="338.0" layoutY="12.0" onAction="#oneSelectMonth" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <Label fx:id="label_monthly" layoutX="278.0" layoutY="17.0" text="Monthly:" textFill="WHITE" />
+                  <JFXTextField fx:id="txt_search" focusColor="WHITE" labelFloat="true" layoutX="21.0" layoutY="384.0" onAction="#search" prefHeight="25.0" prefWidth="215.0" promptText="Search" style="-fx-background-color: white;" unFocusColor="#d24c00" />
+                  <JFXButton fx:id="btn_search" layoutX="243.0" layoutY="383.0" onAction="#search" prefHeight="27.0" prefWidth="69.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Search" textFill="WHITE" />
+                  <TextArea fx:id="txtarea_partsAdded" editable="false" layoutX="470.0" layoutY="163.0" prefHeight="93.0" prefWidth="218.0" promptText="Parts Added" />
+                  <JFXButton fx:id="btn_reload" layoutX="365.0" layoutY="383.0" onAction="#loadTable" prefHeight="27.0" prefWidth="105.0" ripplerFill="WHITE" style="-fx-background-color: #D24C00;" text="Reload Table" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
