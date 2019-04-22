@@ -4,9 +4,9 @@ EECS SoftEng 2016 Team 39 Repository
 ###Team members:
 - Orri Jonsson
 - Nabhan Lashkor
-- Syed Hasnain Bukhari - Used a different email with git hence my contributions aren't showing up in the 'contributors' tab 
+- Syed Hasnain Bukhari 
 - Ajiri Owuasu
-- Shona Lowden - Dropped the module
+- Shona Lowden
 
 ###Modules included: 
 - Authentication
